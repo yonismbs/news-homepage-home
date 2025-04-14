@@ -14,7 +14,7 @@ button {
     font-size: 0.9rem;
     border :none;
     background-color: hsl(5, 85%, 63%);
-    font-weight: bold;
+    font-weight: 700;
     color: hsl(240, 100%, 5%);
     padding: 15px 35px;
     margin: 25px 0 0 0;
@@ -71,8 +71,9 @@ h1 {
 
 .flex-container-2 {
     display :flex;
-    flex-flow: row;
+    flex-direction: row;
     gap : 2rem;
+
 }
 
 .left-side-2 {
@@ -117,36 +118,44 @@ h1 {
 .flex-container-4 {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    gap : 2rem;
-    margin: 20px 0px; 
+    flex : 1 1 0;
+    gap : 3rem;
+    margin-top: 2rem;
 }
 
-.flex-container-4 h1 {
+.card {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 0;
+    gap: 1rem;
+}
+
+.card h1 {
     margin: 0;
     color: hsl(5, 85%, 63%);
 }
 
-.flex-container-4 h3 {
+.card h3 {
     margin: 7px 0px;
     color: hsl(240, 100%, 5%);
 }
 
-.flex-container-4 section {
-    flex-grow: 2;
+.card section {
+    padding : 0;
+    display: flex;
+    flex-direction: column;
+    gap : 1px;
     margin: 0;
 }
 
-.flex-container-4 img {
-    flex-grow: 1;
+.card img {
     width: 100px;
-    height: 130px;
-    display: block;
+    height: 125px;
 }
 
 .headline {
     font-size: 3rem;
-    font-weight: 900;
+    font-weight: 800;
     line-height: 1.1em;
     color: hsl(240, 100%, 5%);
 }
