@@ -33,7 +33,7 @@ h1 {
     font-size: 2rem;
 }
 
-h2 {
+.right-side-2 h2 {
     font-size: 1.25rem;
     color : hsl(36, 100%, 99%);
 }
