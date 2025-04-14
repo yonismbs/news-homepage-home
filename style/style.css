@@ -35,18 +35,39 @@ body {
 .flex-container-2 {
     display :flex;
     flex-flow: row;
+    gap : 2rem
 }
 
 .left-side-2 {
     display: flex;
     flex-flow: column;
+    flex-grow : 2;
+    gap : 2rem;
+}
+
+.right-side-2 {
+    flex-grow: 1;
+    background-color: red;
 }
 
 .left-side-2 img {
-    width: 700px;
+    width: 100%;
 }
 
 .flex-container-3 {
     display: flex;
     flex-flow: row;
+    background-color: blue;
+}
+
+.flex-container-3 > div:nth-child(1){
+    flex-grow: 1;
+}
+
+.flex-container-3 > div:nth-child(2){
+    flex-grow: 1;
+}
+
+.headline{
+    font-size: 3rem;
 }
