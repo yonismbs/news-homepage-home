@@ -114,9 +114,39 @@ h1 {
     padding: 0;
 }
 
+.flex-container-4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap : 2rem;
+    margin: 20px 0px; 
+}
+
+.flex-container-4 h1 {
+    margin: 0;
+    color: hsl(5, 85%, 63%);
+}
+
+.flex-container-4 h3 {
+    margin: 7px 0px;
+    color: hsl(240, 100%, 5%);
+}
+
+.flex-container-4 section {
+    flex-grow: 2;
+    margin: 0;
+}
+
+.flex-container-4 img {
+    flex-grow: 1;
+    width: 100px;
+    height: 130px;
+    display: block;
+}
+
 .headline {
     font-size: 3rem;
     font-weight: 900;
-    line-height: 1em;
+    line-height: 1.1em;
     color: hsl(240, 100%, 5%);
 }
