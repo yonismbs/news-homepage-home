@@ -8,6 +8,19 @@ body {
     color: hsl(236, 13%, 42%);
 }
 
+.overlay {
+    position: fixed;  /* Couvrir tout l'écran */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);  /* Fond gris semi-transparent */
+    visibility: hidden;  /* Cacher par défaut */
+    z-index: 0;  /* Juste derrière la sidebar */
+    opacity: 0;  /* Invisible au départ */
+    transition: opacity 0.7s ease;
+}
+
 p {
     font-size: 15px;
     line-height: 1.7em;
@@ -89,30 +102,30 @@ h1 {
     width: 250px;
     position: fixed;
     z-index: 1;
-    left: -250px;
-    top: 1;
-    background-color: grey;
+    top: 0;
+    right: -250px; 
+    background-color: hsl(36, 100%, 99%);
     padding-top: 60px;
-    transition: left 0.5 ease;
+    transition: right 0.5s ease;
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 10px;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+    color: #111;
     display: block;
     transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: #111;
 }
 
 .sidenav ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 50px 10px;
+}
+
+.sidenav li {
+    color : hsl(240, 100%, 5%);
+    margin: 10px 0px;
 }
 
 /* Active class */
@@ -128,6 +141,12 @@ h1 {
     top: 0;
     right: 25px;
     font-size: 36px;
+}
+
+#closeBtn {
+    font-size: 3rem; /* Augmente la taille de la croix */
+    font-weight: lighter; /* Makes the font bolder */
+    color: hsl(240, 100%, 5%); /* Tu peux aussi changer la couleur */
 }
 
 #openBtn {
@@ -240,10 +259,6 @@ h1 {
 
 /* Mobile layout */
 @media screen and (max-width: 768px) {
-    .flex-container-1 ul {
-        display: none; /* On cache la nav desktop */
-    }
-
     #openBtn {
         display: block;
     }
@@ -256,8 +271,7 @@ h1 {
       flex-direction: column;
     }
 
-    .left-side-2,
-    .right-side-2 {
-      width: 100%;
+    .right-side-1 {
+        display: none;
     }
 }
