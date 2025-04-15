@@ -3,13 +3,13 @@ const mySideNavBalise = document.getElementById("mySidenav");
 const closeBtnBalise = document.getElementById("closeBtn");
 
 openBtnBalise.addEventListener("click", () => {
-    mySideNavBalise.style.right = "0px";  // Lance la transition de la sidebar
-    overlay.style.visibility = "visible";  // Affiche l'overlay
-    overlay.style.opacity = "1";  // Le rendre visible avec transition
+    mySideNavBalise.style.right = "0px";
+    overlay.style.visibility = "visible";
+    overlay.style.opacity = "1";  
 });
 
 closeBtnBalise.addEventListener("click", () => {
-    mySideNavBalise.style.right = "-250px";  // Lance la transition inverse de la sidebar
-    overlay.style.visibility = "hidden";  // Cache l'overlay
-    overlay.style.opacity = "0";  // Le rendre invisible avec transition
+    mySideNavBalise.style.right = "-250px";
+    overlay.style.visibility = "hidden";  
+    overlay.style.opacity = "0";  
 });

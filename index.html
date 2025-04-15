@@ -4,18 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frontend Mentor | News homepage</title>
 
+  <!-- Fonts & Favicon -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+
+  <!-- Styles & Scripts -->
   <link rel="stylesheet" href="style/style.css" />
   <script src="script/script.js" defer></script>
-  <title>Frontend Mentor | News homepage</title>
 </head>
 
 <body>
-
+  <!-- Overlay for mobile menu -->
   <div id="overlay" class="overlay"></div>
 
+  <!-- Mobile Side Navigation -->
   <div id="mySidenav" class="sidenav">
     <a id="closeBtn" href="#" class="close">&#10005;</a>
     <ul>
@@ -26,13 +30,13 @@
       <li><a href="#">Categories</a></li>
     </ul>
   </div>
+
   <div class="app-container">
-    
+
     <!-- Header -->
     <header>
       <nav class="flex-container-1">
         <img src="assets/images/logo.svg" alt="Logo" />
-
         <ul class="right-side-1">
           <li>Home</li>
           <li>New</li>
@@ -40,7 +44,6 @@
           <li>Trending</li>
           <li>Categories</li>
         </ul>
-
         <a href="#" id="openBtn">
           <span class="burger-icon">
             <span></span>
@@ -52,31 +55,33 @@
     </header>
 
     <!-- Main Content -->
-    <div class="flex-container-2">
+    <main class="flex-container-2">
 
-      <!-- Left Side -->
-      <div class="left-side-2">
+      <!-- Left Section -->
+      <section class="left-side-2">
         <img src="assets/images/image-web-3-desktop.jpg" alt="Web 3 image" />
-        
         <div class="flex-container-3">
           <div>
-            <p class="headline">The Bright<br>
+            <p class="headline">
+              The Bright<br>
               Future of<br>
               Web 3.0?
             </p>
           </div>
           <div>
             <p>
-              We dive into the next evolution of the web that<br>claims to put the power 
-              of the platforms back<br>into the hands of the people. But is it really<br>fulfilling its promise?
+              We dive into the next evolution of the web that<br>
+              claims to put the power of the platforms back<br>
+              into the hands of the people. But is it really<br>
+              fulfilling its promise?
             </p>
             <button class="favorite styled" type="button">READ MORE</button>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Right Side -->
-      <section class="right-side-2">
+      <!-- Right Section -->
+      <aside class="right-side-2">
         <h1>New</h1>
 
         <article>
@@ -97,20 +102,20 @@
           <h2>Is VC Funding Drying Up?</h2>
           <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
         </article>
-      </section>
-    </div>
+      </aside>
+    </main>
 
-    <div class="flex-container-4">
-      
+    <!-- Cards Section -->
+    <section class="flex-container-4">
       <div class="card">
         <img src="assets/images/image-retro-pcs.jpg" alt="Retro PC" />
         <section>
-          <h1>01</h1>  
+          <h1>01</h1>
           <h3>Reviving Retro PCs</h3>
           <p>What happens when old PCs<br>are given modern upgrades?</p>
         </section>
       </div>
-    
+
       <div class="card">
         <img src="assets/images/image-top-laptops.jpg" alt="Top Laptops" />
         <section>
@@ -119,7 +124,7 @@
           <p>Our best picks for various<br>needs and budgets.</p>
         </section>
       </div>
-    
+
       <div class="card">
         <img src="assets/images/image-gaming-growth.jpg" alt="Gaming Growth" />
         <section>
@@ -128,18 +133,19 @@
           <p>How the pandemic has sparked<br>fresh opportunities.</p>
         </section>
       </div>
-    
-    </div>
+    </section>
 
     <!-- Footer -->
-    <!-- <footer>
+    <!-- 
+    <footer>
       <div class="attribution">
         Challenge by 
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
         Coded by <a href="#">Your Name Here</a>.
       </div>
-    </footer> -->
-    
+    </footer>
+    -->
+
   </div>
 </body>
 

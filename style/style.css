@@ -1,25 +1,12 @@
-/* -------------------------------------
-   Global Styles
-------------------------------------- */
+/* =====================================
+GLOBAL STYLES
+===================================== */
 
 body {
     background-color: hsl(36, 100%, 99%);
     font-family: 'Inter';
     color: hsl(236, 13%, 42%);
-}
-
-.overlay {
-    position: fixed;  /* Couvrir tout l'écran */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);  /* Fond gris semi-transparent */
-    visibility: hidden;  /* Cacher par défaut */
-    z-index: 0;  /* Juste derrière la sidebar */
-    opacity: 0;  /* Invisible au départ */
-    transition: opacity 0.7s ease;
-}
+    }
 
 p {
     font-size: 15px;
@@ -57,10 +44,9 @@ h1 {
     color: hsl(240, 100%, 5%);
 }
 
-
-/* -------------------------------------
-   Layout: Main Container
-------------------------------------- */
+/* =====================================
+    LAYOUT - MAIN CONTAINER
+===================================== */
 
 .app-container {
     display: flex;
@@ -69,14 +55,12 @@ h1 {
     padding: 5% 10%;
 }
 
-
-/* -------------------------------------
-   Navigation Bar
-------------------------------------- */
+/* =====================================
+    NAVIGATION BAR
+===================================== */
 
 .flex-container-1 {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -86,55 +70,50 @@ h1 {
 
 .right-side-1 {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    flex-grow: 1;
-    list-style-type: none;
     gap: 2rem;
+    list-style-type: none;
+    flex-grow: 1;
+    justify-content: flex-end;
 }
 
-/* -------------------------------------
-   Sidenav menu
-------------------------------------- */
+/* =====================================
+    SIDENAV MENU
+===================================== */
 
 .sidenav {
-    height: 100%;
-    width: 250px;
     position: fixed;
-    z-index: 1;
     top: 0;
-    right: -250px; 
+    right: -250px;
+    width: 250px;
+    height: 100%;
     background-color: hsl(36, 100%, 99%);
     padding-top: 60px;
     transition: right 0.5s ease;
+    z-index: 1;
 }
 
-.sidenav a {
-    padding: 8px 10px;
-    text-decoration: none;
-    color: #111;
-    display: block;
-    transition: 0.3s;
+.sidenav.active {
+    left: 0;
 }
 
 .sidenav ul {
-    list-style-type: none;
-    padding: 0;
+    list-style: none;
     margin: 50px 10px;
+    padding: 0;
 }
 
 .sidenav li {
-    color : hsl(240, 100%, 5%);
-    margin: 10px 0px;
+    margin: 10px 0;
+    color: hsl(240, 100%, 5%);
 }
 
-/* Active class */
-
-.sidenav.active {
-    left:0;
+.sidenav a {
+    display: block;
+    padding: 8px 10px;
+    text-decoration: none;
+    color: #111;
+    transition: 0.3s;
 }
-
-/* Close btn */
 
 .sidenav .close {
     position: absolute;
@@ -144,30 +123,46 @@ h1 {
 }
 
 #closeBtn {
-    font-size: 3rem; /* Augmente la taille de la croix */
-    font-weight: lighter; /* Makes the font bolder */
-    color: hsl(240, 100%, 5%); /* Tu peux aussi changer la couleur */
+    font-size: 3rem;
+    font-weight: lighter;
+    color: hsl(240, 100%, 5%);
 }
 
 #openBtn {
-    display:none;
+    display: none;
 }
 
 .burger-icon span {
-    display:block;
-    width:30px;
+    display: block;
+    width: 30px;
     height: 5px;
     background-color: hsl(240, 100%, 5%);
     margin: 6px 0;
 }
 
-/* -------------------------------------
-   Main Section
-------------------------------------- */
+/* =====================================
+    OVERLAY
+===================================== */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 0;
+    transition: opacity 0.7s ease;
+}
+
+/* =====================================
+    MAIN CONTENT - FLEX CONTAINER 2
+===================================== */
 
 .flex-container-2 {
     display: flex;
-    flex-direction: row;
     gap: 2rem;
 }
 
@@ -183,8 +178,8 @@ h1 {
 }
 
 .right-side-2 {
-    padding: 0 2%;
     background-color: hsl(240, 100%, 5%);
+    padding: 0% 5% 5% 5%;
 }
 
 .right-side-2 h2 {
@@ -196,47 +191,47 @@ h1 {
     color: hsl(233, 8%, 79%);
 }
 
-
-/* -------------------------------------
-   Middle Grid Section
-------------------------------------- */
+/* =====================================
+    MID-GRID - FLEX CONTAINER 3
+===================================== */
 
 .flex-container-3 {
     display: flex;
-    flex-direction: row;
     gap: 2rem;
 }
 
-.flex-container-3 > div:nth-child(1),
-.flex-container-3 > div:nth-child(2) {
+.flex-container-3 > div {
     flex-grow: 1;
     flex-basis: 0;
     padding: 0;
 }
 
-/* -------------------------------------
-   Cards Section
-------------------------------------- */
+/* =====================================
+    CARD SECTION - FLEX CONTAINER 4
+===================================== */
 
 .flex-container-4 {
     display: flex;
-    flex-direction: row;
-    flex: 1 1 0;
+    flex-wrap: wrap;
     gap: 3rem;
     margin-top: 2rem;
-    flex-wrap: wrap;
 }
 
 .card {
     display: flex;
-    flex-direction: row;
-    flex: 1 1 0;
     gap: 1rem;
+    flex: 1 1 0;
 }
 
 .card img {
     width: 100px;
     height: 125px;
+}
+
+.card section {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
 }
 
 .card h1 {
@@ -249,29 +244,21 @@ h1 {
     color: hsl(240, 100%, 5%);
 }
 
-.card section {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-}
+/* =====================================
+    RESPONSIVE STYLES
+===================================== */
 
-/* Mobile layout */
 @media screen and (max-width: 768px) {
     #openBtn {
         display: block;
     }
 
-    .flex-container-2 {
-      flex-direction: column;
-    }
-  
-    .flex-container-3 {
-      flex-direction: column;
-    }
-
     .right-side-1 {
         display: none;
+    }
+
+    .flex-container-2,
+    .flex-container-3 {
+        flex-direction: column;
     }
 }
